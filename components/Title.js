@@ -1,15 +1,10 @@
-import { useTranslation } from '../i18n';
+import React from 'react';
+import PropTypes from 'prop-types';
 
-const Title = () => {
-  const { t } = useTranslation();
+const Title = ({ t }) => <h3>{t('title')}</h3>;
 
-  return (
-    <h3>{t('title')}</h3>
-  )
-}
-
-Title.getInitialProps = async () => ({
-  namespacesRequired: ['common'],
-})
+Title.propTypes = {
+  t: PropTypes.func.isRequired
+};
 
 export default Title;

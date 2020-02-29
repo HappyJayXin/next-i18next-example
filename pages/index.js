@@ -1,14 +1,14 @@
 import React from 'react';
 import Title from '../components/Title';
 import Footer from '../components/Footer';
-import PropTypes from 'prop-types';
-import { withTranslation } from '../i18n';
+import { useTranslation } from '../i18n';
 
-const Home = ({ t }) => {
+const Home = () => {
+  const { t } = useTranslation();
   return (
     <div>
       <h1>{t('home')}</h1>
-      <Title />
+      <Title t={t} />
       <Footer />
     </div>
   );
@@ -18,8 +18,4 @@ Home.getInitialProps = async () => ({
   namespacesRequired: ['common']
 });
 
-Home.propTypes = {
-  t: PropTypes.func.isRequired
-};
-
-export default withTranslation('common')(Home);
+export default Home;

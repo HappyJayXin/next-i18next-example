@@ -1,8 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { i18n, withTranslation } from '../i18n';
+import { i18n } from '../i18n';
 
-const Footer = ({ t }) => (
+const Footer = () => (
   <footer>
     <p>
       <button type="button" onClick={() => i18n.changeLanguage('en')}>
@@ -15,8 +14,4 @@ const Footer = ({ t }) => (
   </footer>
 );
 
-Footer.propTypes = {
-  t: PropTypes.func.isRequired
-};
-
-export default withTranslation('common')(Footer);
+export default Footer;
