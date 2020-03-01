@@ -1,7 +1,6 @@
 import React from 'react';
-import { i18n } from '../i18n';
 
-const Footer = () => (
+const Footer = ({ i18n }) => (
   <footer>
     <p>
       <button type="button" onClick={() => i18n.changeLanguage('en')}>
